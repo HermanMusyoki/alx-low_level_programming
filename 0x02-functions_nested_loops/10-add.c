@@ -3,6 +3,9 @@
 /**
  * add - a function that adds two integers and gives the result
  *
+ * @n1: the first number for addition
+ * @n2: the second number for addition
+ *
  * Return: result of the addition
  */
 
