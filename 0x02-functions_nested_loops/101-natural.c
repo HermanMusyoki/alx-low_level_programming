@@ -1,9 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - entry point
- *
- * @n: the integer for the loop to be checked
+ * main - a function to sum of all the multiples of 3 or 5 below 1024
  *
  * Return: always 0 (success)
  */
