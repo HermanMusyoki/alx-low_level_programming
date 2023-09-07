@@ -13,6 +13,7 @@ int check_digit(char *str)
 	{
 		if (str[m] < '0' || str[m] > '9')
 			return (0);
+		m++;
 	}
 	return (1);
 }
