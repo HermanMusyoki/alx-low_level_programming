@@ -70,6 +70,7 @@ int main(int argc, char *argv[])
 		{
 			num2 = str2[strlen2] - '0';
 			base += result[strlen1 + strlen2 + 1] + (num1 * num2);
+			result[strlen1 + strlen2 + 1] = base % 10;
 			base /= 10;
 		}
 		if (base > 0)
