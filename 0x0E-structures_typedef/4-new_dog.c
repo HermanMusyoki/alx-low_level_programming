@@ -11,10 +11,10 @@
  * Return: string length
  */
 
-int _strlength( char *str)
+int _strlength(char *str)
 {
 	int length;
-	
+
 	length = 0;
 
 	while (str[length] != '\0')
@@ -22,14 +22,14 @@ int _strlength( char *str)
 	return (length);
 }
 /**
- * _str_copy - copies string from src to dest pointer
+ * _strcpy - copies string from src to dest pointer
  *
  * @src: pointer to source string
  * @dest: pointer to destination buffer string to be copied
  *
  * Return: dest pointer
  */
-char* _strcpy(char *dest, char *src)
+char *_strcpy(char *dest, char *src)
 {
 	int m, strlen;
 
@@ -79,10 +79,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (newDog->name == NULL)
 	{
 		free(newDog);
-		return(NULL);
+		return (NULL);
 	}
 	newDog->owner = malloc(sizeof(char) * (owner_len + 1));
-	if(newDog->owner == NULL)
+	if (newDog->owner == NULL)
 	{
 		free(newDog);
 		free(newDog->name);
@@ -92,7 +92,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	newDog->age = age;
 	_strcpy(newDog->name, name);
 	_strcpy(newDog->owner, owner);
-	
+
 
 	return (newDog);
 }
