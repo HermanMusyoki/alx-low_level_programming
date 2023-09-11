@@ -3,6 +3,8 @@
 /**
  * main - a function that prints the file name it
  * was compiled from.
+ *
+ * Return: always 0 (success)
  */
 
 int main(void)
