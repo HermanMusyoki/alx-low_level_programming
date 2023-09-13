@@ -1,28 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-/**
- * print_opcodes - prints the opcodes of a function
- * @number_of_bytes: the number of bytes to print
- * @function_ptr: pointer to the function to print its bytes
- * Return: nothing
- */
-void print_opcodes(int number_of_bytes, void (*function_ptr)(int, char *[]))
-{
-	int m;
-	unsigned char *func_ptr = (unsigned char *)function_ptr;
-
-	m = 0;
-	while (m < number_of_bytes)
-	{
-		printf("%02x", func_ptr[m]);
-		if ((m + 1) % 2 == 0)
-		{
-			printf(" ");
-		}
-		m++;
-	}
-	printf("\n");
-}
 
 /**
  * main - a function to print opcodes of its own
@@ -34,8 +11,9 @@ void print_opcodes(int number_of_bytes, void (*function_ptr)(int, char *[]))
  */
 int main(int argc, char *argv[])
 {
-	int number_of_bytes;
-
+	int number_of_bytes, m;
+	int (*func_ptr)(int, char **) = main;
+	unsigned char print_opcode;
 
 	if (argc != 2)
 	{
@@ -51,8 +29,18 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
-	print_opcodes(number_of_bytes, (void(*)(int, char *[]))main);
+	for (m = 0 ; m < number_of_bytes ; m++)
+	{
+		print_opcode = *(unsigned char *)func_ptr;
+		printf("%.2x", print_opcode);
 
+		if (m == number_of_bytes - 1)
+			continue;
+		printf(" ");
+
+		func_ptr++;
+	}
+	printf("\n");
 	return (0);
 
 }
