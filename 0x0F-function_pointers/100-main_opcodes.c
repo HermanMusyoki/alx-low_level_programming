@@ -3,7 +3,7 @@
 /**
  * print_opcodes - prints the opcodes of a function
  * @number_of_bytes: the number of bytes to print
- * @func_ptr: pointer to the function to print its bytes
+ * @function_ptr: pointer to the function to print its bytes
  * Return: nothing
  */
 void print_opcodes(int number_of_bytes, void (*function_ptr)(int, char *[]))
