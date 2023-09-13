@@ -2,7 +2,8 @@
 #include <stdlib.h>
 
 
-/** main - a function to print opcodes of its own
+/**
+ * main - a function to print opcodes of its own
  * main function
  * @argc: the number of arguments passed to the function
  * @argv: array of arguments to the function
