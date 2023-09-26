@@ -3,7 +3,7 @@
 /**
  * free_listint_safe - a function that frees a lsistint_t list
  *
- * @head: pointer to the linked list to be freed
+ * @h: double pointer to the linked list to be freed
  *
  * Return: the size of the freed list and set head to NULL
  */
