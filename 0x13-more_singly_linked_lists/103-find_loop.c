@@ -10,32 +10,27 @@
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-	size_t length = 0;
-	int m;
-	listint_t *new;
+	listint_t *firstNode = head;
+	listint_t *secondNode = head;
 
-	if (!h || *h)
-		return (0);
+	if (!head)
+		return (NULL);
 
-	while (*h)
+	while (firstNode && secondNode && secondNode->next)
 	{
-		m = *h - (*h)->next;
-		if (m > 0)
+		secondNode = secondNode->next->next;
+		firstNode = firstNode->next;
+		if (secondNode == firstNode)
 		{
-			new = (*h)->next;
-			free(*h);
-			*h = new;
-			length++;
-		}
-		else
-		{
-			free(*h);
-			*h = NULL;
-			length++;
-			break;
+			firstNode = head;
+			while (firstNode != secondNode)
+			{
+				firstNode = firstNode->next;
+				secondNode = secondNode->next;
+			}
+			return (secondNode);
 		}
 	}
-	*h = NULL;
 
-	return (length);
+	return (NULL);
 }
