@@ -5,8 +5,7 @@
 process-unique identifier (handle) for a file or other input/output resource,
 such as a pipe or network socket.)
 
-|Integer|    Name	 |   <unistd.h>	     |<stdio.h> file stream |
-| Value |                | symbolic constant |                      |
+|Integer Value |   Name  | <unistd.h>  symbolic constant |<stdio.h> file stream |
 | :---: | :------------: | :---------------: | :-------------------:|
 |0      |Standard input	 |STDIN_FILENO	     |stdin		    |
 |1      |Standard output |STDOUT_FILENO	     |stdout		    |
