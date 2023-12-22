@@ -5,7 +5,7 @@
  * @key: parameter for hash key
  * @size: the array size of the hash table
  *
- * Return: index key with key/value pair 
+ * Return: index key with key/value pair
  */
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
